@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Generator</title>
+</head>
+<body>
+    <h1>Generate a Graph</h1>
+    
+    <form action="/generate" method="post">
+        <button type="submit">Generate Graphs</button>
+    </form>
+
+    <!-- Show graph if it exists -->
+    {% if graph_url %}
+        <h2>Generated Graph:</h2>
+        <img src="{{ graph_url }}" alt="Generated Graph">
+    {% endif %}
+</body>
+</html>
